@@ -1,7 +1,7 @@
 #!/bin/bash
 # Checking if HomeBrew is installed
 
-$totalSteps ="9"
+totalSteps="9"
 
 which -s brew
 if [[ $? != 0 ]] ; then
@@ -41,7 +41,7 @@ echo "[7/$totalSteps] Copy ZSH Config file to user folder..."
 cp .zshrc ~/.zshrc
 
 echo "[8/$totalSteps] Reload zshrc config..."
-source ~/.zshrc
+zsh source ~/.zshrc
 
 echo "[9/$totalSteps] Installing iterm theme"
 mkdir schemes
